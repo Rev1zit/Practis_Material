@@ -46,23 +46,24 @@ namespace Minerals
 
         private void Btn_Del_CLick(object sender, RoutedEventArgs e)
         {
-            var Pointik = dataGrid1.SelectedItems.Cast<Point>().ToList();
-            if (MessageBox.Show($"Вы точно хотите удалить следующий пункт {Pointik.Count()}?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            var Pointik = (Point)dataGrid1.SelectedItem;
+            
+            if (MessageBox.Show($"Вы точно хотите удалить следующий пункт {Pointik.Name}?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                minerals2Entities1.GetContext().Point.RemoveRange(Pointik);
-                minerals2Entities1.GetContext().SaveChanges();
-                MessageBox.Show("Данные удалены");
-                dataGrid1.ItemsSource = minerals2Entities1.GetContext().Point.ToList();
+                    material.Point.Remove(Pointik);
+                    material.SaveChanges();
+                    MessageBox.Show("Данные удалены");
+                    dataGrid1.ItemsSource = material.Point.ToList();
                 }
                 catch (Exception ex)
                 {
-                MessageBox.Show(ex.Message.ToString());
-                throw;
+                    MessageBox.Show(ex.Message.ToString());
+                    throw;
                 }
             }
-            
+
         }
     }
 }

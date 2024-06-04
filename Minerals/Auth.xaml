@@ -15,7 +15,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBox x:Name="login_1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100" Height="20" FontSize="16" Margin="401,0,0,0" />
-        <Button Click="Auth_1" Content="Войти"  HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="40 0 0 120" Height="25" Grid.Row="1" Width="100" />
+        <Button Click="Authorize" Content="Войти"  HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="40 0 0 120" Height="25" Grid.Row="1" Width="100" />
         <PasswordBox x:Name="pass_1" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="20" FontSize="16" Margin="401,10,0,0" />
         <TextBlock FontSize="16" HorizontalAlignment="Center"  Margin="0 0 60 0" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="25"  RenderTransformOrigin="-0.071,0.656"><Run Language="ru-ru" Text="Логин"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
         <TextBlock FontSize="16" HorizontalAlignment="Center" Margin="0 10 60 0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Grid.Row="1" RenderTransformOrigin="-0.263,0.597" ><Run Language="ru-ru" Text="Пароль"/><LineBreak/><Run/></TextBlock>

@@ -25,6 +25,7 @@ namespace Minerals
         {
             InitializeComponent();
         }
+
         minerals2Entities1 minerals = new minerals2Entities1();
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

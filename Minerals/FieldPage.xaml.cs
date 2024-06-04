@@ -20,12 +20,13 @@ namespace Minerals
     /// </summary>
     public partial class FieldPage : Page
     {
+        minerals2Entities1 material = new minerals2Entities1();
+
         public FieldPage()
         {
             InitializeComponent();
         }
 
-         minerals2Entities1 material = new minerals2Entities1();
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var query =

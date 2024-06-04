@@ -24,7 +24,7 @@ namespace Minerals
         {
             InitializeComponent();
         }
-        private void Auth_1(object sender, RoutedEventArgs e)
+        private void Authorize(object sender, RoutedEventArgs e)
         {
             FieldPage fieldPage1 = new FieldPage();
             fieldPage1.ShowsNavigationUI = true;
