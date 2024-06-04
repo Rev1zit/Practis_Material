@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="minerals2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Deposit">
+    <Key>
+      <PropertyRef Name="DepositCode" />
+    </Key>
+    <Property Name="DepositCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UnitOfMeasurement" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MarketPrice" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Point">
+    <Key>
+      <PropertyRef Name="PointCode" />
+    </Key>
+    <Property Name="PointCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Capacity" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="minerals2Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Deposit" EntityType="Self.Deposit" />
+    <EntitySet Name="Point" EntityType="Self.Point" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Field" EntityType="minerals2Model.Field" />
+  </EntityContainer>
+  <EntityType Name="Field">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PointCode" Type="Int32" />
+    <Property Name="DepositCode" Type="Int32" />
+    <Property Name="DevelopmentMethod" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Opening" Type="Int32" />
+    <Property Name="Closing" Type="Int32" />
+    <Property Name="Reserves" Type="Int32" />
+    <Property Name="CostPrice" Type="Int32" />
+  </EntityType>
+</Schema>

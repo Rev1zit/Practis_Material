@@ -1,0 +1,21 @@
+﻿<Page x:Class="Minerals.FieldPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Minerals"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FieldPage"
+      Loaded="Window_Loaded">
+
+    <Grid Background="White">
+        <DataGrid Name="dataGrid1" Margin="0,82,0,78" />
+        <TextBlock FontSize="50" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Месторождения"/></TextBlock>
+        <Button Content="Ископаемые"  FontSize="16" VerticalAlignment="Top" Margin="10" HorizontalAlignment="Right" Click="NextPage"/>
+        <Button Content="Пункты" FontSize="16"  VerticalAlignment="Top" Margin="10" HorizontalAlignment="Left" Click="NoNextPage"/>
+        <Button Width="100" Height="30" Content="Добавить" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Button>
+        <Button Width="100" Height="30" Content="Редактировать" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Button>
+        <Button Width="100" Height="30" Content="Удалить" VerticalAlignment="Bottom" HorizontalAlignment="Right"></Button>
+    </Grid>
+</Page>
